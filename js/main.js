@@ -23,7 +23,6 @@ console.log(myArray[myArray.length - 1]);
 // Refer any one item within the array
 
 console.log(myArray[1]);
-
 // using .push() to add some element to your array (Adds at the end)
 
 myArray.push("school");
@@ -54,5 +53,24 @@ console.log(firstItem);
 
 // Removing a specific index item from the array
 
-delete myArray[1];
+// .splice() can be used to delete a specific element in the array, it can also be used to replace or add another element at a specific position
+myArray.splice(1, 1, 42);
 console.log(myArray);
+console.log(myArray[1]);
+
+const Arrr = ["A", "B", "C", "D", "E", "F"];
+
+const newArray = Arrr.slice(2, 5);
+
+console.log(newArray);
+console.log(Arrr);
+
+// .reverse() can be used to reverse the elements of an array
+
+Arrr.reverse();
+console.log(Arrr);
+
+// .join() method takes an array and creates a new string out of that array
+
+const newString = Arrr.join();
+console.log(newString);
