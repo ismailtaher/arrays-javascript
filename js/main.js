@@ -74,3 +74,53 @@ console.log(Arrr);
 
 const newString = Arrr.join();
 console.log(newString);
+
+// .split() method takes a string and seprates it to create a new array, takes some parameter or character used to seperate the string by
+
+const ard = newString.split(",");
+console.log(ard);
+
+// .concat() method is used to join two arrays in order to create a new array, which includes all the elements of the parent arrays
+
+// As the myArrayA was first & myArrayB was inside the concat, so the elements of myArrayA will also be first inside the new array
+const myArrayA = ["A", "B", "C"];
+const myArrayB = ["D", "E", "F"];
+const newART = myArrayA.concat(myArrayB);
+console.log(newART);
+
+// Spread Operator (...) is also a newer method which joins the elements of its parent arrays inside a new array
+
+const newARee = [...myArrayA, ...myArrayB];
+console.log(newARee);
+
+// Creating multi-dimensional Arrays and accessing elements in those multidemensional arrays
+
+const equipShelfA = ["baseball", "football", "volleyball"];
+const equipShelfB = ["basketball", "golf ball", "tennis ball"];
+
+const clothesShelfA = ["tank tops", "t-shirts", "jerseys"];
+const clothesShelfB = ["sweat tops", "sweat pants", "hoodies"];
+
+// now accessing elements in these arrays is straight forward as they are single dimension arrays.
+
+console.log(equipShelfA[1]);
+console.log(clothesShelfB[0]);
+
+// We can nest these arrays inside new arrays to create two dimensional arrays
+
+const equipDept = [equipShelfA, equipShelfB];
+const clothesDept = [clothesShelfA, clothesShelfB];
+
+// Now in order to access those same elements by the new nested arrays created, we would have to use a different method
+
+console.log(equipDept[0][1]);
+console.log(clothesDept[1][0]);
+
+// We can further nest these nested arrays in order to create one main array
+
+const sportsStore = [equipDept, clothesDept];
+
+// Now in order to access those same specific elements by the main nested array, we would have to add further more specificity
+
+console.log(sportsStore[0][0][1]);
+console.log(sportsStore[1][1][0]);
